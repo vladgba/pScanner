@@ -12,5 +12,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "picoStrips"
+rootProject.name = "pScanner"
 include(":app")

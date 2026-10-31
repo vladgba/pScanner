@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Selected tab = pUI accent-soft pill (same as pCalc / pCalendar tabs). -->
 <ripple xmlns:android="http://schemas.android.com/apk/res/android" android:color="@color/ripple">
-    <item>
+    <item android:top="6dp" android:bottom="6dp" android:left="4dp" android:right="4dp">
         <selector>
             <item android:state_selected="true">
-                <layer-list>
-                    <item android:gravity="bottom|center_horizontal" android:height="3dp" android:width="48dp">
-                        <shape><solid android:color="@color/accent" /><corners android:radius="2dp" /></shape>
-                    </item>
-                </layer-list>
+                <shape>
+                    <solid android:color="@color/p_accent_soft" />
+                    <corners android:radius="@dimen/p_radius_pill" />
+                </shape>
             </item>
             <item><color android:color="@android:color/transparent" /></item>
         </selector>

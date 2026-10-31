@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="bg">#FFF6F7F9</color>
-    <color name="surface">#FFFFFFFF</color>
-    <color name="text">#FF14171C</color>
-    <color name="text_dim">#FF5E6672</color>
-    <color name="accent">#FF0B7A75</color>
-    <color name="accent_soft">#1F0B7A75</color>
-    <color name="divider">#FFE3E6EA</color>
-    <color name="danger">#FFC0392B</color>
-    <color name="ripple">#220B7A75</color>
-    <color name="scrim">#99000000</color>
+    <!-- pScanner roles, aliased to the shared pUI tokens (light/dark handled by the tokens). -->
+    <color name="bg">@color/p_bg</color>
+    <color name="surface">@color/p_surface</color>
+    <color name="text">@color/p_text</color>
+    <color name="text_dim">@color/p_text2</color>
+    <color name="accent">@color/p_accent</color>
+    <color name="accent_soft">@color/p_accent_soft</color>
+    <color name="divider">@color/p_line</color>
+    <color name="danger">@color/p_danger</color>
+    <color name="ripple">@color/p_ripple</color>
+    <color name="scrim">@color/p_scrim</color>
 </resources>

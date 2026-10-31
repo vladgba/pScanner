@@ -1,4 +1,4 @@
-package x.vladgba.strips.ui
+package x.vladgba.scanner.ui
 
 import android.Manifest
 import android.app.Activity
@@ -12,16 +12,16 @@ import android.view.View
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
-import x.vladgba.strips.CodeActivity
-import x.vladgba.strips.R
-import x.vladgba.strips.data.Entry
-import x.vladgba.strips.data.History
-import x.vladgba.strips.engine.Formats
-import x.vladgba.strips.engine.Images
-import x.vladgba.strips.engine.ScanResult
-import x.vladgba.strips.engine.ZXingCppEngine
+import x.vladgba.scanner.CodeActivity
+import x.vladgba.scanner.R
+import x.vladgba.scanner.data.Entry
+import x.vladgba.scanner.data.History
+import x.vladgba.scanner.engine.Formats
+import x.vladgba.scanner.engine.Images
+import x.vladgba.scanner.engine.ScanResult
+import x.vladgba.scanner.engine.ZXingCppEngine
 import kotlin.concurrent.thread
-import x.vladgba.strips.engine.LumaFrame
+import x.vladgba.scanner.engine.LumaFrame
 
 class ScanPage(private val activity: Activity, val root: View) {
     private val viewfinder: ViewfinderView = root.findViewById(R.id.viewfinder)

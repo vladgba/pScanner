@@ -1,4 +1,4 @@
-package x.vladgba.strips.ui
+package x.vladgba.scanner.ui
 
 import android.app.Activity
 import android.graphics.Bitmap
@@ -13,11 +13,11 @@ import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Spinner
 import android.widget.TextView
-import x.vladgba.strips.R
-import x.vladgba.strips.data.Entry
-import x.vladgba.strips.data.History
-import x.vladgba.strips.engine.CodeRenderer
-import x.vladgba.strips.engine.Formats
+import x.vladgba.scanner.R
+import x.vladgba.scanner.data.Entry
+import x.vladgba.scanner.data.History
+import x.vladgba.scanner.engine.CodeRenderer
+import x.vladgba.scanner.engine.Formats
 
 class GeneratePage(private val activity: Activity, val root: View) {
     private val prefs = activity.getSharedPreferences("settings", Activity.MODE_PRIVATE)

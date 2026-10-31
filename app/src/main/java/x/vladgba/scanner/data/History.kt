@@ -1,4 +1,4 @@
-package x.vladgba.strips.data
+package x.vladgba.scanner.data
 
 import android.content.ContentValues
 import android.content.Context

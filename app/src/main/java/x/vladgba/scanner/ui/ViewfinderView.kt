@@ -1,4 +1,4 @@
-package x.vladgba.strips.ui
+package x.vladgba.scanner.ui
 
 import android.content.Context
 import android.graphics.Canvas
@@ -7,7 +7,7 @@ import android.graphics.Path
 import android.graphics.RectF
 import android.util.AttributeSet
 import android.view.View
-import x.vladgba.strips.R
+import x.vladgba.scanner.R
 import kotlin.math.max
 import kotlin.math.min
 

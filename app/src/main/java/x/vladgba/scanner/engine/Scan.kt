@@ -1,4 +1,4 @@
-package x.vladgba.strips.engine
+package x.vladgba.scanner.engine
 
 /** A camera frame as an 8-bit luminance buffer with rowStride == width. */
 class LumaFrame(

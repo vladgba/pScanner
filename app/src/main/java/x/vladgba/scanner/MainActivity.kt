@@ -1,4 +1,4 @@
-package x.vladgba.strips
+package x.vladgba.scanner
 
 import android.app.Activity
 import android.content.Intent
@@ -6,11 +6,11 @@ import android.content.pm.PackageManager
 import android.os.Bundle
 import android.view.View
 import android.view.inputmethod.InputMethodManager
-import x.vladgba.strips.scanner.HoneywellScanner
-import x.vladgba.strips.ui.Actions
-import x.vladgba.strips.ui.GeneratePage
-import x.vladgba.strips.ui.LastPage
-import x.vladgba.strips.ui.ScanPage
+import x.vladgba.scanner.scanner.HoneywellScanner
+import x.vladgba.scanner.ui.Actions
+import x.vladgba.scanner.ui.GeneratePage
+import x.vladgba.scanner.ui.LastPage
+import x.vladgba.scanner.ui.ScanPage
 
 class MainActivity : Activity() {
     private lateinit var scan: ScanPage

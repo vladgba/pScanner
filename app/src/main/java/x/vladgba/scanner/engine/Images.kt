@@ -1,4 +1,4 @@
-package x.vladgba.strips.engine
+package x.vladgba.scanner.engine
 
 import android.content.Context
 import android.graphics.Bitmap

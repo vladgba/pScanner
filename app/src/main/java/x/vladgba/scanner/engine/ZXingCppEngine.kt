@@ -1,4 +1,4 @@
-package x.vladgba.strips.engine
+package x.vladgba.scanner.engine
 
 import android.graphics.Bitmap
 import android.graphics.Rect

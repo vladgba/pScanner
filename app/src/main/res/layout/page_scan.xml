@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-    <x.vladgba.strips.ui.ViewfinderView
+    <x.vladgba.scanner.ui.ViewfinderView
         android:id="@+id/viewfinder"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

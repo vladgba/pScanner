@@ -1,4 +1,4 @@
-package x.vladgba.strips.ui
+package x.vladgba.scanner.ui
 
 import android.app.Activity
 import android.app.AlertDialog
@@ -10,11 +10,11 @@ import android.widget.BaseAdapter
 import android.widget.ListView
 import android.widget.PopupMenu
 import android.widget.TextView
-import x.vladgba.strips.CodeActivity
-import x.vladgba.strips.R
-import x.vladgba.strips.data.Entry
-import x.vladgba.strips.data.History
-import x.vladgba.strips.engine.Formats
+import x.vladgba.scanner.CodeActivity
+import x.vladgba.scanner.R
+import x.vladgba.scanner.data.Entry
+import x.vladgba.scanner.data.History
+import x.vladgba.scanner.engine.Formats
 
 class LastPage(private val activity: Activity, val root: View) {
     private val list: ListView = root.findViewById(R.id.lastList)

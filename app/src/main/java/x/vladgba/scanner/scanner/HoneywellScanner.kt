@@ -1,4 +1,4 @@
-package x.vladgba.strips.scanner
+package x.vladgba.scanner.scanner
 
 import android.content.Context
 import android.content.pm.PackageManager
@@ -9,7 +9,7 @@ import com.honeywell.aidc.AidcManager
 import com.honeywell.aidc.BarcodeFailureEvent
 import com.honeywell.aidc.BarcodeReadEvent
 import com.honeywell.aidc.BarcodeReader
-import x.vladgba.strips.engine.ScanResult
+import x.vladgba.scanner.engine.ScanResult
 
 /**
  * Built-in scan engine of Honeywell mobile computers (CT40/CT60/EDA5x…), via Honeywell's DataCollection.jar.

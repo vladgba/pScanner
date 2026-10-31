@@ -7,11 +7,11 @@ plugins {
 apply(from = rootProject.file("gradle/android-common.gradle"))
 
 android {
-    namespace = "x.vladgba.strips"
+    namespace = "x.vladgba.scanner"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "x.vladgba.strips"
+        applicationId = "x.vladgba.scanner"
         minSdk = 24
         targetSdk = 36
         ndk { abiFilters += listOf("arm64-v8a", "armeabi-v7a", "x86_64") }

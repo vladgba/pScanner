@@ -1,4 +1,4 @@
-package x.vladgba.strips.ui
+package x.vladgba.scanner.ui
 
 import android.annotation.SuppressLint
 import android.app.Activity
@@ -17,8 +17,8 @@ import android.view.View
 import android.view.WindowInsets
 import android.widget.TextView
 import android.widget.Toast
-import x.vladgba.strips.R
-import x.vladgba.strips.ShareProvider
+import x.vladgba.scanner.R
+import x.vladgba.scanner.ShareProvider
 import java.io.File
 
 /** Copy / share / open helpers. Everything is handed to other apps via intents; we never touch the network. */

@@ -1,4 +1,4 @@
-package x.vladgba.strips
+package x.vladgba.scanner
 
 import android.app.Activity
 import android.content.Context
@@ -10,11 +10,11 @@ import android.view.View
 import android.view.WindowManager
 import android.widget.ImageView
 import android.widget.TextView
-import x.vladgba.strips.data.Entry
-import x.vladgba.strips.data.History
-import x.vladgba.strips.engine.CodeRenderer
-import x.vladgba.strips.engine.Formats
-import x.vladgba.strips.ui.Actions
+import x.vladgba.scanner.data.Entry
+import x.vladgba.scanner.data.History
+import x.vladgba.scanner.engine.CodeRenderer
+import x.vladgba.scanner.engine.Formats
+import x.vladgba.scanner.ui.Actions
 
 /** Shows a saved code: drawn large (with max brightness, for showing to another scanner) plus its content. */
 class CodeActivity : Activity() {

@@ -1,4 +1,4 @@
-package x.vladgba.strips.ui
+package x.vladgba.scanner.ui
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -18,7 +18,7 @@ import android.os.HandlerThread
 import android.util.Size
 import android.view.Surface
 import android.view.TextureView
-import x.vladgba.strips.engine.LumaFrame
+import x.vladgba.scanner.engine.LumaFrame
 import java.util.concurrent.atomic.AtomicBoolean
 import kotlin.math.abs
 import kotlin.math.max

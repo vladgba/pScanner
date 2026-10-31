@@ -1,5 +1,8 @@
 package x.vladgba.scanner
 
+import x.vladgba.scanner.pui.PAboutInfo
+import x.vladgba.scanner.pui.showPAbout
+
 import android.app.Activity
 import android.content.Intent
 import android.content.pm.PackageManager
@@ -25,6 +28,7 @@ class MainActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        findViewById<android.view.View>(R.id.btnAbout).setOnClickListener { showPAbout(PAboutInfo(repo = "pScanner")) }
         Actions.applyInsets(this, findViewById(R.id.root))
 
         scan = ScanPage(this, findViewById(R.id.pageScan))

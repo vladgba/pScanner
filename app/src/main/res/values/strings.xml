@@ -38,4 +38,5 @@
     <string name="ec_level">Error correction</string>
     <string name="gen_placeholder">Type text, a link, numbers…</string>
     <string name="not_renderable">This format can be read but not drawn, so only the content is shown.</string>
+    <string name="about">About</string>
 </resources>

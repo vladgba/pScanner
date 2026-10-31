@@ -17,6 +17,9 @@
         <TextView android:id="@+id/tabScan" style="@style/PS.Tab" android:text="@string/tab_scan" />
         <TextView android:id="@+id/tabLast" style="@style/PS.Tab" android:text="@string/tab_last" />
         <TextView android:id="@+id/tabGenerate" style="@style/PS.Tab" android:text="@string/tab_generate" />
+        <ImageButton android:id="@+id/btnAbout" style="@style/P.IconButton"
+            android:layout_width="48dp" android:layout_height="match_parent"
+            android:contentDescription="@string/about" android:src="@drawable/p_ic_info" />
     </LinearLayout>
 
     <FrameLayout

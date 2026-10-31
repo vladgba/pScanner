@@ -30,7 +30,7 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/Theme.PicoStrips"
+        android:theme="@style/Theme.P"
         tools:targetApi="36">
 
         <activity

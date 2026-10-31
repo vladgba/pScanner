@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">picoStrips</string>
     <string name="tab_scan">Scan</string>
     <string name="tab_last">Last</string>
     <string name="tab_generate">Generate</string>

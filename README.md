@@ -1,4 +1,4 @@
-# picoStrips
+# pScanner
 
 Lightweight barcode / QR / Aztec / Data Matrix scanner and generator for Android.
 No internet permission, no Google Play Services, no AppCompat/Compose — just the Android framework,

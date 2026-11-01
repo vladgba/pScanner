@@ -14,6 +14,7 @@ android {
         applicationId = "x.vladgba.scanner"
         minSdk = 24
         targetSdk = 36
+        testInstrumentationRunner = "x.vladgba.scanner.MemoryInstrumentation"
         ndk { abiFilters += listOf("arm64-v8a", "armeabi-v7a", "x86_64") }
     }
 

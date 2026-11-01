@@ -99,8 +99,14 @@ class ScanPage(private val activity: Activity, val root: View) {
     fun onImagePicked(uri: Uri) {
         thread(name = "image-decode") {
             // Own reader instance: the live one belongs to the camera decode thread.
-            val result = runCatching { Images.load(activity, uri)?.let { ZXingCppEngine().decodeBitmap(it) } }.getOrNull()
+            val result = runCatching {
+                Images.load(activity, uri)?.let { bitmap ->
+                    try { ZXingCppEngine().decodeBitmap(bitmap) }
+                    finally { bitmap.recycle() }
+                }
+            }.getOrNull()
             activity.runOnUiThread {
+                if (activity.isDestroyed || activity.isFinishing) return@runOnUiThread
                 if (result == null) Actions.toast(activity, R.string.nothing_found) else deliver(result, force = true)
             }
         }

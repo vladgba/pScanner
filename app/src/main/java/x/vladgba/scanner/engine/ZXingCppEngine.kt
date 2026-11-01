@@ -31,6 +31,7 @@ class ZXingCppEngine {
 
     private var lumaBitmap: Bitmap? = null
     private var argbFallback = false
+    private var argbPixels = IntArray(0)
 
     fun decode(frame: LumaFrame): ScanResult? {
         val bmp = toBitmap(frame)
@@ -40,6 +41,7 @@ class ZXingCppEngine {
         } catch (e: RuntimeException) {
             if (argbFallback) throw e
             argbFallback = true // A_8 bitmaps not supported by this build: fall back to ARGB
+            lumaBitmap?.recycle()
             lumaBitmap = null
             return null
         }
@@ -49,7 +51,8 @@ class ZXingCppEngine {
     /** Thorough (slow) decode of a still image, e.g. picked from gallery. */
     fun decodeBitmap(bitmap: Bitmap): ScanResult? {
         val bmp = if (bitmap.config == Bitmap.Config.ARGB_8888) bitmap else bitmap.copy(Bitmap.Config.ARGB_8888, false)
-        return pick(still.read(bmp, Rect(0, 0, bmp.width, bmp.height), 0))
+        try { return pick(still.read(bmp, Rect(0, 0, bmp.width, bmp.height), 0)) }
+        finally { if (bmp !== bitmap) bmp.recycle() }
     }
 
     private fun pick(results: List<BarcodeReader.Result>, frame: LumaFrame? = null): ScanResult? {
@@ -70,18 +73,22 @@ class ZXingCppEngine {
         val cfg = if (argbFallback) Bitmap.Config.ARGB_8888 else Bitmap.Config.ALPHA_8
         var bmp = lumaBitmap
         if (bmp == null || bmp.width != f.width || bmp.height != f.height || bmp.config != cfg) {
+            bmp?.recycle()
             bmp = Bitmap.createBitmap(f.width, f.height, cfg)
             lumaBitmap = bmp
         }
         if (!argbFallback && bmp.rowBytes == f.width) {
             bmp.copyPixelsFromBuffer(ByteBuffer.wrap(f.data, 0, f.width * f.height))
         } else {
-            val px = IntArray(f.width * f.height)
+            // Reuse conversion storage instead of allocating a full frame on every decode.
+            if (argbPixels.size != f.width * f.height) argbPixels = IntArray(f.width * f.height)
+            val px = argbPixels
             for (i in px.indices) {
                 val v = f.data[i].toInt() and 0xFF
                 px[i] = (0xFF shl 24) or (v shl 16) or (v shl 8) or v
             }
             if (bmp.config != Bitmap.Config.ARGB_8888) {
+                bmp.recycle()
                 bmp = Bitmap.createBitmap(f.width, f.height, Bitmap.Config.ARGB_8888)
                 lumaBitmap = bmp
                 argbFallback = true

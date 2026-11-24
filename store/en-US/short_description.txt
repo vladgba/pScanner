@@ -1,0 +1,1 @@
+Scan barcodes and QR codes, keep history and generate new codes.

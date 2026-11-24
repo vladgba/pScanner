@@ -1,0 +1,5 @@
+Scan from the camera or an image, review history and generate codes to save or share.
+
+Scan barcodes and QR codes, keep history and generate new codes.
+
+Requires Android API 24 or later.
